@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import Destinations from './pages/Destinations'
 import Booking from './pages/Booking'
 import About from './pages/About'
+
+import HolidayPlanner from './pages/HolidayPlanner'
 import Inspiration from './pages/Inspiration'
 import Quiz from './pages/Quiz'
 import './styles/App.css'
@@ -36,7 +38,21 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <AppContent />
+      <div className="app">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/destinations" element={<Destinations />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/holiday-planner" element={<HolidayPlanner />} />
+          </Routes>
+        </main>
+<AppContent />
+        <Footer />
+      </div>
+
     </Router>
   )
 }

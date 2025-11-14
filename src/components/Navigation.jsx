@@ -25,6 +25,11 @@ function Navigation() {
             About
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/holiday-planner" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Planificateur
+          </NavLink>
+        </li>
       </ul>
     </nav>
   )

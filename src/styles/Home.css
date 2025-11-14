@@ -9,10 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-image: 
-    linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%),
-    url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -25,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
@@ -41,7 +38,7 @@
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
   letter-spacing: -1px;
   line-height: 1.2;
 }
@@ -52,6 +49,7 @@
   opacity: 0.95;
   font-weight: 300;
   letter-spacing: 0.5px;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* CTA Cards */
@@ -94,17 +92,6 @@
 
 .cta-card:hover::before {
   transform: scaleX(1);
-}
-
-.cta-icon {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  display: inline-block;
-  transition: transform 0.4s ease;
-}
-
-.cta-card:hover .cta-icon {
-  transform: scale(1.1) rotate(5deg);
 }
 
 .cta-card h3 {
@@ -251,65 +238,6 @@
   transform: translateY(0);
 }
 
-/* Trust Section */
-.trust-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-}
-
-.trust-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.trust-content h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 80px;
-  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-}
-
-.trust-features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-.trust-feature {
-  text-align: center;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.4s ease;
-}
-
-.trust-feature:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-5px);
-}
-
-.trust-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-.trust-feature h4 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.trust-feature p {
-  font-size: 1rem;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
 /* Responsive Design */
 @media (max-width: 968px) {
   .hero-title {
@@ -324,11 +252,6 @@
   .destinations-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-  
-  .trust-features {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
   }
 }
 
@@ -369,19 +292,5 @@
   
   .destination-card {
     height: 350px;
-  }
-  
-  .trust-section {
-    padding: 80px 20px;
-  }
-  
-  .trust-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-  }
-  
-  .trust-features {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 }

@@ -9,6 +9,11 @@
   padding-top: 80px;
 }
 
+.main-content-home {
+  flex: 1;
+  padding-top: 0;
+}
+
 /* Utility classes */
 .container {
   max-width: 1200px;
@@ -90,6 +95,6 @@
   }
   
   .main-content {
-    padding-top: 60px;
+    padding-top: 70px;
   }
 }

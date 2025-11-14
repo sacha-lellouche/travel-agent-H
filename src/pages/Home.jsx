@@ -6,34 +6,34 @@ function Home() {
 
   const destinations = [
     {
-      name: 'Venise, Italie',
+      name: 'Venice, Italy',
       image: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
-      description: 'Canaux romantiques et architecture vénitienne'
+      description: 'Romantic canals and Venetian architecture'
     },
     {
-      name: 'Cappadoce, Turquie',
+      name: 'Cappadocia, Turkey',
       image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&q=80',
-      description: 'Montgolfières au lever du soleil'
+      description: 'Hot air balloons at sunrise'
     },
     {
-      name: 'Santorini, Grèce',
+      name: 'Santorini, Greece',
       image: 'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800&q=80',
-      description: 'Villages blancs et couchers de soleil magiques'
+      description: 'White villages and magical sunsets'
     },
     {
-      name: 'Bali, Indonésie',
+      name: 'Bali, Indonesia',
       image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80',
-      description: 'Temples sacrés et rizières en terrasses'
+      description: 'Sacred temples and terraced rice fields'
     },
     {
-      name: 'Kyoto, Japon',
+      name: 'Kyoto, Japan',
       image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80',
-      description: 'Temples zen et jardins traditionnels'
+      description: 'Zen temples and traditional gardens'
     },
     {
-      name: 'Machu Picchu, Pérou',
+      name: 'Machu Picchu, Peru',
       image: 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80',
-      description: 'Cité inca perchée dans les montagnes'
+      description: 'Ancient Inca city in the mountains'
     }
   ]
 
@@ -43,22 +43,20 @@ function Home() {
       <section className="hero-section">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-title">Où souhaitez-vous voyager ?</h1>
-          <p className="hero-subtitle">Laissez-nous créer votre voyage parfait</p>
+          <h1 className="hero-title">Where do you want to travel?</h1>
+          <p className="hero-subtitle">Let us create your perfect journey</p>
           
           <div className="cta-cards">
-            <div className="cta-card" onClick={() => navigate('/destinations')}>
-              <div className="cta-icon">🌍</div>
-              <h3>Je sais où je veux aller</h3>
-              <p>Explorez nos destinations et trouvez le voyage parfait pour vous. Comparez les prix, les activités et réservez en toute simplicité.</p>
-              <span className="cta-arrow">Découvrir les destinations →</span>
+            <div className="cta-card" onClick={() => navigate('/quiz')}>
+              <h3>I know where I want to go</h3>
+              <p>Explore our destinations and find the perfect trip for you. Compare prices, activities, and book with ease.</p>
+              <span className="cta-arrow">Discover destinations →</span>
             </div>
             
-            <div className="cta-card" onClick={() => navigate('/booking')}>
-              <div className="cta-icon">✨</div>
-              <h3>J'ai besoin d'inspiration</h3>
-              <p>Notre équipe d'experts vous aidera à créer un voyage sur mesure basé sur vos envies, votre budget et vos dates de disponibilité.</p>
-              <span className="cta-arrow">Planifier mon voyage →</span>
+            <div className="cta-card" onClick={() => navigate('/inspiration')}>
+              <h3>I need inspiration</h3>
+              <p>Our team of experts will help you create a tailor-made trip based on your desires, budget, and availability.</p>
+              <span className="cta-arrow">Plan my trip →</span>
             </div>
           </div>
         </div>
@@ -66,8 +64,8 @@ function Home() {
 
       {/* Featured Destinations */}
       <section className="destinations-showcase">
-        <h2 className="section-title">Destinations qui inspirent</h2>
-        <p className="section-subtitle">Découvrez les plus beaux endroits du monde</p>
+        <h2 className="section-title">Inspiring Destinations</h2>
+        <p className="section-subtitle">Discover the most beautiful places in the world</p>
         
         <div className="destinations-grid">
           {destinations.map((destination, index) => (
@@ -78,41 +76,12 @@ function Home() {
                   <div className="destination-info">
                     <h3>{destination.name}</h3>
                     <p>{destination.description}</p>
-                    <span className="explore-btn">Explorer →</span>
+                    <span className="explore-btn">Explore →</span>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Trust Section */}
-      <section className="trust-section">
-        <div className="trust-content">
-          <h2>Pourquoi voyager avec nous ?</h2>
-          <div className="trust-features">
-            <div className="trust-feature">
-              <div className="trust-icon">⭐</div>
-              <h4>Expertise locale</h4>
-              <p>Des conseillers passionnés qui connaissent chaque destination</p>
-            </div>
-            <div className="trust-feature">
-              <div className="trust-icon">💎</div>
-              <h4>Voyages sur mesure</h4>
-              <p>Chaque itinéraire est unique et personnalisé</p>
-            </div>
-            <div className="trust-feature">
-              <div className="trust-icon">🛡️</div>
-              <h4>Sérénité garantie</h4>
-              <p>Support 24/7 et assistance pendant votre voyage</p>
-            </div>
-            <div className="trust-feature">
-              <div className="trust-icon">💰</div>
-              <h4>Meilleur rapport qualité-prix</h4>
-              <p>Des tarifs négociés avec nos partenaires de confiance</p>
-            </div>
-          </div>
         </div>
       </section>
     </div>

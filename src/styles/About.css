@@ -1,0 +1,162 @@
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-section {
+  background-color: var(--bg-light);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.value {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.value:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.value h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.value p {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.stats {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+}
+
+.stats h2 {
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.stat h3 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.stat p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+.contact-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.contact-cta .cta-button {
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-section {
+    padding: 30px 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .values-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-cta {
+    padding: 60px 20px;
+  }
+  
+  .contact-cta h2 {
+    font-size: 2rem;
+  }
+}

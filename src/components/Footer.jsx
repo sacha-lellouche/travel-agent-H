@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import '../styles/Footer.css'
 
 function Footer() {
+  const navigate = useNavigate()
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -16,6 +19,20 @@ function Footer() {
             <li><a href="/destinations">Destinations</a></li>
             <li><a href="/booking">Booking</a></li>
             <li><a href="/about">About</a></li>
+          </ul>
+        </div>
+        
+        <div className="footer-section">
+          <h4>Tools</h4>
+          <ul>
+            <li>
+              <button 
+                onClick={() => navigate('/holiday-planner')} 
+                className="footer-planner-link"
+              >
+                🗓️ Holiday Planner
+              </button>
+            </li>
           </ul>
         </div>
         

@@ -237,6 +237,7 @@ function Quiz() {
       timestamp: new Date().toISOString()
     }
 
+    // Try to send to webhook but don't block navigation if it fails
     try {
       const response = await fetch('http://localhost:5678/webhook/98d548af-d971-41d2-a335-77650714067f', {
         method: 'POST',
@@ -247,17 +248,16 @@ function Quiz() {
       })
 
       if (response.ok) {
-        console.log('Quiz data sent successfully:', formattedData)
-        // Navigate to results or confirmation page
-        navigate('/inspiration')
+        console.log('✅ Quiz data sent successfully to webhook')
       } else {
-        console.error('Failed to send quiz data')
-        alert('There was an error submitting your answers. Please try again.')
+        console.warn('⚠️ Webhook returned non-OK status, but continuing anyway')
       }
     } catch (error) {
-      console.error('Error sending data to webhook:', error)
-      alert('There was an error submitting your answers. Please try again.')
+      console.warn('⚠️ Could not reach webhook, but continuing to summary page:', error.message)
     }
+
+    // Always navigate to summary page regardless of webhook status
+    navigate('/quiz-summary', { state: { quizData: formattedData } })
   }
 
   const handleAnswer = (field, value) => {
@@ -452,34 +452,70 @@ function Quiz() {
               <h2>{currentScreenData.question}</h2>
               <p className="quiz-description">{currentScreenData.description}</p>
               <div className="quiz-ranking">
-                {currentScreenData.activities.map((activity, index) => (
-                  <div key={activity.id} className="ranking-item">
-                    <span className="ranking-icon">{activity.icon}</span>
-                    <span className="ranking-label">{activity.label}</span>
-                    <div className="ranking-controls">
-                      <button onClick={() => {
-                        // Simple ranking logic - you can make it more sophisticated
-                        const newActivities = [...answers.activities]
+                {currentScreenData.activities.map((activity, index) => {
+                  const isSelected = (answers.activities || []).includes(activity.id)
+                  return (
+                    <div 
+                      key={activity.id} 
+                      className={`ranking-item ${isSelected ? 'selected' : ''}`}
+                      onClick={() => {
+                        const newActivities = [...(answers.activities || [])]
                         if (!newActivities.includes(activity.id)) {
                           newActivities.push(activity.id)
+                          handleAnswer('activities', newActivities)
                         }
-                        handleAnswer('activities', newActivities)
-                      }}>
-                        Add to favorites
-                      </button>
+                      }}
+                    >
+                      <span className="ranking-icon">{activity.icon}</span>
+                      <span className="ranking-label">{activity.label}</span>
+                      {isSelected && (
+                        <span className="ranking-checkmark">✓</span>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
+
+              {/* Selected Activities Summary */}
+              {(answers.activities || []).length > 0 && (
+                <div className="selected-activities-summary">
+                  <h3>✨ Your Selected Activities ({(answers.activities || []).length})</h3>
+                  <div className="selected-activities-list">
+                    {(answers.activities || []).map((activityId, index) => {
+                      const activity = currentScreenData.activities.find(a => a.id === activityId)
+                      if (!activity) return null
+                      return (
+                        <div key={activityId} className="selected-activity-chip">
+                          <span className="chip-icon">{activity.icon}</span>
+                          <span className="chip-label">{activity.label}</span>
+                          <button 
+                            className="chip-remove"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              const newActivities = answers.activities.filter(id => id !== activityId)
+                              handleAnswer('activities', newActivities)
+                            }}
+                          >
+                            ×
+                          </button>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
               <div className="quiz-buttons">
                 {currentScreen > 0 && (
                   <button className="quiz-btn-back" onClick={handlePrevious}>
                     ← Back
                   </button>
                 )}
-                <button className="quiz-btn-next" onClick={handleNext}>
-                  Next →
-                </button>
+                {(answers.activities || []).length > 0 && (
+                  <button className="quiz-btn-next" onClick={handleNext}>
+                    Next →
+                  </button>
+                )}
               </div>
             </div>
           )}

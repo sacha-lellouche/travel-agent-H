@@ -294,7 +294,7 @@
 }
 
 .quiz-ranking {
-  max-height: 500px;
+  max-height: 400px;
   overflow-y: auto;
   margin-bottom: 30px;
   padding: 20px;
@@ -312,11 +312,20 @@
   margin-bottom: 10px;
   border: 2px solid transparent;
   transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
 .ranking-item:hover {
   border-color: var(--primary-color);
   transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.ranking-item.selected {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
 }
 
 .ranking-icon {
@@ -327,6 +336,93 @@
   flex: 1;
   font-weight: 600;
   color: var(--text-color);
+}
+
+.ranking-checkmark {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.selected-activities-summary {
+  margin-top: 30px;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+}
+
+.selected-activities-summary h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selected-activities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.selected-activity-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  animation: chipAppear 0.3s ease;
+}
+
+.selected-activity-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+}
+
+.chip-icon {
+  font-size: 1.2rem;
+}
+
+.chip-label {
+  font-size: 0.95rem;
+}
+
+.chip-remove {
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 5px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  margin-left: 5px;
+}
+
+.chip-remove:hover {
+  color: #e74c3c;
+  transform: scale(1.2);
+}
+
+@keyframes chipAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .ranking-controls button {

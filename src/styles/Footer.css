@@ -36,6 +36,24 @@
   color: var(--accent-color);
 }
 
+.footer-planner-link {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  line-height: 1.8;
+}
+
+.footer-planner-link:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
 .social-links {
   display: flex;
   gap: 15px;

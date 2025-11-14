@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Destinations from './pages/Destinations'
 import Booking from './pages/Booking'
 import About from './pages/About'
+import HolidayPlanner from './pages/HolidayPlanner'
 import './styles/App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/destinations" element={<Destinations />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/about" element={<About />} />
+            <Route path="/holiday-planner" element={<HolidayPlanner />} />
           </Routes>
         </main>
         <Footer />

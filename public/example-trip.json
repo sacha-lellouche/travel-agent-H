@@ -2,169 +2,169 @@
   "activities": [
     {
       "id": "activity-1",
-      "nom": "Visite de la Tour Eiffel",
+      "nom": "Visite du Colisée",
       "type": "Visite",
-      "duree": 120,
-      "lieu": "Champ de Mars, Paris",
+      "duree": 150,
+      "lieu": "Piazza del Colosseo, Rome",
       "jour": 1,
       "heure_debut": "09:00",
-      "description": "Montée au sommet de la Tour Eiffel pour une vue panoramique sur Paris. Réservation incluse pour éviter les files d'attente."
+      "description": "Visite guidée du Colisée, l'amphithéâtre le plus emblématique de Rome. Découverte de l'arène où combattaient les gladiateurs et exploration des souterrains."
     },
     {
       "id": "activity-2",
-      "nom": "Déjeuner au Café de Flore",
+      "nom": "Déjeuner à La Carbonara",
       "type": "Restaurant",
       "duree": 90,
-      "lieu": "172 Boulevard Saint-Germain, Paris",
+      "lieu": "Via Panisperna 214, Rome",
       "jour": 1,
       "heure_debut": "12:00",
-      "description": "Restaurant historique fréquenté par les intellectuels et artistes. Cuisine française traditionnelle."
+      "description": "Restaurant traditionnel romain célèbre pour ses pâtes à la carbonara authentiques et ses plats typiques du Latium."
     },
     {
       "id": "activity-3",
-      "nom": "Musée du Louvre",
-      "type": "Musée",
+      "nom": "Forum Romain et Mont Palatin",
+      "type": "Visite",
       "duree": 180,
-      "lieu": "Rue de Rivoli, Paris",
+      "lieu": "Via della Salara Vecchia, Rome",
       "jour": 1,
       "heure_debut": "14:30",
-      "description": "Visite guidée du plus grand musée d'art au monde. Découverte de la Joconde, la Vénus de Milo et les antiquités égyptiennes."
+      "description": "Exploration du cœur de la Rome antique avec le Forum Romain et ses temples, puis montée sur le Mont Palatin pour une vue panoramique sur la ville."
     },
     {
       "id": "activity-4",
-      "nom": "Croisière sur la Seine",
+      "nom": "Fontaine de Trevi et gelato",
       "type": "Loisir",
       "duree": 60,
-      "lieu": "Port de la Bourdonnais, Paris",
+      "lieu": "Piazza di Trevi, Rome",
       "jour": 1,
-      "heure_debut": "18:30",
-      "description": "Bateau-mouche pour découvrir Paris depuis la Seine au coucher du soleil. Commentaires audio disponibles en 14 langues."
+      "heure_debut": "18:00",
+      "description": "Visite de la célèbre Fontaine de Trevi, jetez une pièce pour assurer votre retour à Rome, suivie d'une dégustation de gelato artisanal."
     },
     {
       "id": "activity-5",
-      "nom": "Petit-déjeuner à l'hôtel",
+      "nom": "Petit-déjeuner italien",
       "type": "Restaurant",
-      "duree": 60,
-      "lieu": "Hôtel Le Bristol, Paris",
+      "duree": 45,
+      "lieu": "Caffè Sant'Eustachio, Rome",
       "jour": 2,
       "heure_debut": "08:00",
-      "description": "Buffet continental avec viennoiseries fraîches, fruits de saison et café."
+      "description": "Petit-déjeuner typiquement romain avec cappuccino et cornetto dans l'un des meilleurs cafés de Rome."
     },
     {
       "id": "activity-6",
-      "nom": "Visite de Montmartre",
-      "type": "Visite",
-      "duree": 150,
-      "lieu": "Montmartre, Paris",
+      "nom": "Visite du Vatican",
+      "type": "Musée",
+      "duree": 240,
+      "lieu": "Viale Vaticano, Cité du Vatican",
       "jour": 2,
-      "heure_debut": "10:00",
-      "description": "Balade dans les ruelles pittoresques de Montmartre, visite du Sacré-Cœur et de la Place du Tertre avec ses artistes de rue."
+      "heure_debut": "09:00",
+      "description": "Visite des Musées du Vatican, de la Chapelle Sixtine avec les fresques de Michel-Ange et de la Basilique Saint-Pierre. Accès coupe-file inclus."
     },
     {
       "id": "activity-7",
-      "nom": "Déjeuner Chez L'Ami Jean",
+      "nom": "Déjeuner Chez Armando al Pantheon",
       "type": "Restaurant",
       "duree": 120,
-      "lieu": "27 Rue Malar, Paris",
+      "lieu": "Salita de' Crescenzi 31, Rome",
       "jour": 2,
-      "heure_debut": "13:00",
-      "description": "Bistrot parisien authentique avec une ambiance chaleureuse. Spécialités basques et françaises."
+      "heure_debut": "13:30",
+      "description": "Trattoria historique près du Panthéon, servant une cuisine romaine authentique depuis 1961. Spécialités : carciofi alla giudia et saltimbocca."
     },
     {
       "id": "activity-8",
-      "nom": "Shopping aux Champs-Élysées",
-      "type": "Shopping",
+      "nom": "Le Panthéon et Piazza Navona",
+      "type": "Visite",
       "duree": 120,
-      "lieu": "Avenue des Champs-Élysées, Paris",
+      "lieu": "Piazza della Rotonda, Rome",
       "jour": 2,
-      "heure_debut": "15:30",
-      "description": "Promenade shopping sur la plus belle avenue du monde. Boutiques de luxe, concept stores et grands magasins."
+      "heure_debut": "16:00",
+      "description": "Visite du Panthéon, temple antique transformé en église, puis promenade vers la Piazza Navona avec ses fontaines baroques et ses artistes de rue."
     },
     {
       "id": "activity-9",
-      "nom": "Spectacle au Moulin Rouge",
-      "type": "Loisir",
-      "duree": 120,
-      "lieu": "82 Boulevard de Clichy, Paris",
+      "nom": "Dîner au Trastevere",
+      "type": "Restaurant",
+      "duree": 150,
+      "lieu": "Quartier Trastevere, Rome",
       "jour": 2,
-      "heure_debut": "21:00",
-      "description": "Spectacle emblématique de cabaret parisien avec les célèbres danseuses du French Cancan. Dîner-spectacle disponible."
+      "heure_debut": "20:00",
+      "description": "Dîner dans le quartier bohème de Trastevere. Ambiance authentique avec ses ruelles pavées, restaurants typiques et vie nocturne animée."
     },
     {
       "id": "activity-10",
-      "nom": "Visite du château de Versailles",
-      "type": "Visite",
-      "duree": 240,
-      "lieu": "Place d'Armes, Versailles",
+      "nom": "Villa Borghese et Galerie",
+      "type": "Musée",
+      "duree": 180,
+      "lieu": "Piazzale Scipione Borghese 5, Rome",
       "jour": 3,
       "heure_debut": "09:30",
-      "description": "Découverte du château de Louis XIV, ses appartements royaux, la Galerie des Glaces et les jardins à la française."
+      "description": "Visite de la Galerie Borghèse abritant des chefs-d'œuvre du Bernin et du Caravage, suivie d'une promenade dans les jardins de la Villa Borghese."
     },
     {
       "id": "activity-11",
-      "nom": "Déjeuner à La Petite Venise",
+      "nom": "Déjeuner Pizzeria Emma",
       "type": "Restaurant",
       "duree": 90,
-      "lieu": "Parc du Château de Versailles",
+      "lieu": "Via del Monte della Farina 28, Rome",
       "jour": 3,
-      "heure_debut": "13:30",
-      "description": "Restaurant élégant dans le parc de Versailles, cuisine gastronomique française avec vue sur le Grand Canal."
+      "heure_debut": "13:00",
+      "description": "Dégustation de pizza romaine à la pâte fine et croustillante dans une pizzeria moderne au cœur de Rome."
     },
     {
       "id": "activity-12",
-      "nom": "Promenade dans les jardins",
-      "type": "Nature",
-      "duree": 120,
-      "lieu": "Jardins de Versailles",
+      "nom": "Marché de Campo de' Fiori",
+      "type": "Shopping",
+      "duree": 90,
+      "lieu": "Piazza Campo de' Fiori, Rome",
       "jour": 3,
       "heure_debut": "15:00",
-      "description": "Balade dans les jardins de Versailles, visite du Grand Trianon et du Hameau de la Reine."
+      "description": "Flânerie au marché coloré de Campo de' Fiori avec ses étals de fruits, légumes, épices et produits italiens typiques."
     },
     {
       "id": "activity-13",
-      "nom": "Retour à Paris",
-      "type": "Transport",
+      "nom": "Escaliers de la Piazza di Spagna",
+      "type": "Visite",
       "duree": 60,
-      "lieu": "Versailles - Paris",
+      "lieu": "Piazza di Spagna, Rome",
       "jour": 3,
-      "heure_debut": "17:30",
-      "description": "Transfert en train RER C de Versailles Château Rive Gauche jusqu'à Paris."
+      "heure_debut": "17:00",
+      "description": "Ascension des célèbres escaliers de la Trinité-des-Monts et visite de la Piazza di Spagna, quartier élégant du shopping de luxe."
     },
     {
       "id": "activity-14",
-      "nom": "Dîner d'au revoir",
+      "nom": "Dîner d'au revoir avec vue",
       "type": "Restaurant",
       "duree": 120,
-      "lieu": "Le Jules Verne, Tour Eiffel",
+      "lieu": "Aroma Restaurant, Via Labicana 125, Rome",
       "jour": 3,
       "heure_debut": "19:30",
-      "description": "Dîner gastronomique au restaurant du chef Frédéric Anton, situé au 2e étage de la Tour Eiffel. Vue spectaculaire sur Paris illuminé."
+      "description": "Dîner gastronomique sur la terrasse du restaurant Aroma avec vue spectaculaire sur le Colisée illuminé. Cuisine italienne moderne étoilée Michelin."
     }
   ],
   "pendingActivities": [
     {
       "id": "pending-1",
-      "nom": "Visite du Marais",
+      "nom": "Visite des Catacombes",
       "type": "Visite",
-      "duree": 90,
-      "lieu": "Le Marais, Paris",
-      "description": "Balade dans le quartier historique du Marais, ses hôtels particuliers et boutiques"
+      "duree": 120,
+      "lieu": "Via Appia Antica, Rome",
+      "description": "Exploration des catacombes de Saint-Calixte, cimetières souterrains des premiers chrétiens"
     },
     {
       "id": "pending-2",
-      "nom": "Séance de Yoga",
-      "type": "Sport",
-      "duree": 60,
-      "lieu": "Parc des Buttes-Chaumont",
-      "description": "Séance de yoga en plein air au lever du soleil"
+      "nom": "Cours de cuisine italienne",
+      "type": "Loisir",
+      "duree": 180,
+      "lieu": "Cooking Classes Rome, Centro Storico",
+      "description": "Apprendre à préparer des pâtes fraîches et tiramisu avec un chef italien"
     },
     {
       "id": "pending-3",
-      "nom": "Atelier de Pâtisserie",
-      "type": "Loisir",
+      "nom": "Balade à vélo sur la Via Appia",
+      "type": "Sport",
       "duree": 120,
-      "lieu": "École Lenôtre, Paris",
-      "description": "Apprendre à faire des macarons avec un chef pâtissier"
+      "lieu": "Via Appia Antica, Rome",
+      "description": "Tour à vélo sur l'ancienne voie romaine bordée de pins parasols et ruines antiques"
     }
   ]
 }

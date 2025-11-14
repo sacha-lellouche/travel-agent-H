@@ -6,27 +6,27 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-section">
           <h3>Travel Agent H</h3>
-          <p>Votre partenaire voyage de confiance</p>
+          <p>Your trusted travel partner</p>
         </div>
         
         <div className="footer-section">
-          <h4>Liens rapides</h4>
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Accueil</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/destinations">Destinations</a></li>
-            <li><a href="/booking">Réservation</a></li>
-            <li><a href="/about">À propos</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/about">About</a></li>
           </ul>
         </div>
         
         <div className="footer-section">
           <h4>Contact</h4>
           <p>Email: contact@travelagenth.com</p>
-          <p>Tél: +33 1 23 45 67 89</p>
+          <p>Phone: +33 1 23 45 67 89</p>
         </div>
         
         <div className="footer-section">
-          <h4>Suivez-nous</h4>
+          <h4>Follow Us</h4>
           <div className="social-links">
             <a href="#" aria-label="Facebook">Facebook</a>
             <a href="#" aria-label="Instagram">Instagram</a>
@@ -36,7 +36,7 @@ function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; 2025 Travel Agent H. Tous droits réservés.</p>
+        <p>&copy; 2025 Travel Agent H. All rights reserved.</p>
       </div>
     </footer>
   )

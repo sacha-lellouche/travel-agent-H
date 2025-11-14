@@ -1,0 +1,341 @@
+.inspiration {
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.inspiration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.inspiration-logo {
+  position: relative;
+  z-index: 10;
+  padding: 30px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inspiration-logo h1 {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.inspiration-logo:hover {
+  transform: scale(1.05);
+}
+
+.inspiration-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px 80px;
+}
+
+.inspiration-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.inspiration-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  letter-spacing: -1px;
+}
+
+.inspiration-header p {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.inspiration-content {
+  margin-bottom: 0;
+}
+
+.prompt-form {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-family: inherit;
+  line-height: 1.6;
+  color: var(--text-color);
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+.prompt-suggestions {
+  margin-top: 20px;
+  padding: 25px;
+  background: var(--bg-light);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.prompt-suggestions p {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggestions-list button {
+  text-align: left;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.suggestions-list button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: rgba(102, 126, 234, 0.05);
+  transform: translateX(5px);
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.submit-btn,
+.clear-btn {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border: none;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.clear-btn {
+  background: white;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+}
+
+.clear-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.response-section {
+  margin-top: 50px;
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.response-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.response-content {
+  padding: 30px;
+  background: var(--bg-light);
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.response-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.response-meta {
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.response-meta strong {
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.response-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.action-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn.primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border: none;
+}
+
+.action-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.action-btn.secondary {
+  background: white;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+}
+
+.action-btn.secondary:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .inspiration-logo {
+    padding: 20px;
+  }
+
+  .inspiration-logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .inspiration-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .inspiration-header p {
+    font-size: 1.1rem;
+  }
+  
+  .prompt-form,
+  .response-section {
+    padding: 30px 20px;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .submit-btn,
+  .clear-btn {
+    width: 100%;
+  }
+  
+  .response-actions {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    width: 100%;
+  }
+
+  .suggestions-list button {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}

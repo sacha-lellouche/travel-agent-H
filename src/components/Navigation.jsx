@@ -7,7 +7,7 @@ function Navigation() {
       <ul className="nav-list">
         <li>
           <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Accueil
+            Home
           </NavLink>
         </li>
         <li>
@@ -17,12 +17,12 @@ function Navigation() {
         </li>
         <li>
           <NavLink to="/booking" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Réservation
+            Booking
           </NavLink>
         </li>
         <li>
           <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            À propos
+            About
           </NavLink>
         </li>
         <li>
